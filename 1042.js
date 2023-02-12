@@ -1,6 +1,6 @@
-const first = -14;
+const first = 7;
 const second = 21;
-const third = 7;
+const third = -14;
 
 const sort = (...arr) => {
   return arr.sort((a, b) => a - b);
