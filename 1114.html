@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="1114.js" defer></script>
+    <title>Document</title>
+    <style>
+      h3 {
+        margin-bottom: 50px;
+      }
+
+      .start_program {
+        display: block;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        border: none;
+        border-radius: 50px;
+        background-color: red;
+        color: white;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        cursor: pointer;
+      }
+
+      .start_program:focus {
+        animation: focusAnim 2s infinite;
+      }
+
+      @keyframes focusAnim {
+        0% {
+          transform: scale(1.1);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        90% {
+          transform: scale(1.3);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .check_password {
+        display: block;
+        margin-top: 50px;
+      }
+
+      .password_output {
+        color: aqua;
+        margin-top: 60px;
+      }
+
+      .password_output_msg {
+        padding-left: 20px;
+        text-transform: uppercase;
+        color: red;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h3>Get password Status :</h3>
+    <button class="start_program">Start The Program</button
+    <p class="password_output">Password output: <span class="password_output_msg">Incorrect</span>
+    </p>
+  </body>
+
+</html>
