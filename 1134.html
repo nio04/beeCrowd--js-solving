@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --color-primary: orangered;
+        --color-black: black;
+        --color-white: white;
+        --color-azure: azure;
+      }
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--color-primary);
+        margin: 10px;
+      }
+      .header {
+        text-transform: uppercase;
+        text-align: center;
+        background-color: var(--color-azure);
+        color: var(--color-black);
+        font-size: 60px;
+        padding: 20px 40px;
+        word-spacing: 10px;
+        letter-spacing: 6px;
+        font-family: cursive;
+        border-radius: 30px;
+        margin-bottom: 30px;
+        transition: all 0.6s;
+        animation: fullrotate 1s;
+      }
+      @keyframes fullrotate {
+        0% {
+          transform: rotate(120deg);
+        }
+        50% {
+          transform: rotate(210deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .information {
+        margin-top: 20px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 40px;
+        color: var(--color-white);
+        letter-spacing: 6px;
+        word-spacing: 8px;
+      }
+      table {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 5px solid white;
+        padding: 15px;
+        text-align: center;
+        color: var(--color-white);
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      thead tr {
+        background-color: var(--color-azure);
+      }
+      .table-header {
+        color: red;
+        text-transform: uppercase;
+      }
+
+      .footer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        height: 110px;
+      }
+      .start {
+        flex: 0 0 50%;
+        display: block;
+        margin-right: auto;
+        border: none;
+        background-color: var(--color-azure);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        font-size: 30px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .output_container {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .stastics_header {
+        color: var(--color-white);
+        text-transform: uppercase;
+        font-size: 20px;
+        word-spacing: 8px;
+        letter-spacing: 3px;
+        padding-left: 15px;
+        font-weight: 900;
+      }
+      .breaker {
+        background-color: white;
+        margin: 6px 0;
+        width: 80%;
+        height: 5px;
+      }
+      .stastics_output {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        /* align-self: flex-start; */
+        margin-left: 40px;
+        margin-top: 15px;
+        font-size: 20px;
+        padding: 10px;
+
+        /* display: block; */
+        text-align: center;
+      }
+    </style>
+    <script src="1134.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 class="header">gas station</h3>
+
+    <h3 class="information">
+      mirwarishpur gas station: get product usage guide
+    </h3>
+    <table>
+      <thead>
+        <tr>
+          <th class="table-header">Input</th>
+          <th class="table-header">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alcohol</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>gasoline</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>diseal</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Exit</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer">
+      <button class="start">start the machine</button>
+      <div class="output_container">
+        <p class="stastics_header">mirwarishpur gas station: usage stastics</p>
+        <div class="breaker"></div>
+        <p class="stastics_output">output goes here</p>
+      </div>
+    </div>
+  </body>
+</html>
