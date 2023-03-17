@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        box-sizing: inherit;
+      }
+      body {
+        background-color: bisque;
+        color: rgb(48, 11, 11);
+        font: "Fira Code", sans-serif;
+        margin: 15px;
+      }
+      .header {
+        /* margin-top: 20px; */
+        text-align: center;
+        background-color: red;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        word-spacing: 4px;
+        padding: 20px 10px;
+      }
+      .start {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        border: none;
+        background-color: green;
+        color: white;
+        padding: 30px 20px;
+        font-size: 40px;
+        cursor: pointer;
+      }
+      .start:focus {
+        background-color: white;
+        color: red;
+        animation: btnDesign 0.8s infinite;
+      }
+      @keyframes btnDesign {
+        0% {
+          transform: translateY(50px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      h4 {
+        margin-top: 80px;
+        font-size: 60px;
+        color: aqua;
+        background-color: black;
+        padding: 20px 10px;
+        text-align: center;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 40px;
+        padding: 40px;
+        font-weight: 600;
+        background-color: pink;
+        color: rgb(0, 0, 0);
+        text-align: center;
+      }
+    </style>
+    <script src="1131.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="header">Grenais game Statistic</h2>
+    <button class="start">Start Program</button>
+    <h4>output Statistic:</h4>
+    <p class="result">won</p>
+  </body>
+</html>
