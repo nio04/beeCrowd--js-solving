@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanuman:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: black;
+        --color-blue: blue;
+        --color-red: red;
+        --color-orangered: orangered;
+      }
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+      }
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+      body {
+        margin: 4rem;
+        background-image: linear-gradient(
+          to top right,
+          rgba(255, 255, 255, 0.824),
+          rgba(0, 0, 255, 0.596)
+        );
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .header {
+        font-family: cursive;
+        font-size: 3.5rem;
+        text-align: center;
+        margin: 2.1rem 0 3.5rem 0;
+      }
+      .header__important-note {
+        color: var(--color-red);
+        position: relative;
+        cursor: pointer;
+      }
+      .modal {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 128, 0, 0.687);
+        color: white;
+        padding: 5rem;
+        font-size: 16px;
+        z-index: 1;
+        right: 39px;
+        top: 106px;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        letter-spacing: 2px;
+        line-height: 2.9rem;
+        border-radius: 50px;
+      }
+      .reveal {
+        display: block;
+      }
+      .animation_container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-blue);
+        height: 25rem;
+      }
+      .animation_title {
+        position: absolute;
+        padding: 1rem 2rem;
+        background-color: rgba(0, 0, 255, 0.644);
+        color: #fff;
+        font-size: 2rem;
+        left: 37%;
+        top: 37%;
+        border-radius: 20rem;
+        text-transform: uppercase;
+        letter-spacing: 0.9rem;
+        font-family: cursive;
+        box-shadow: 0 0.5rem 0.8rem rgba(2, 2, 24, 0.543);
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+      }
+      .animation_title:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.3rem 0.4rem rgba(2, 2, 24, 0.543);
+      }
+      .animation_title:active {
+        transform: translateY(5px);
+        box-shadow: 0em 0rem 0rem rgba(2, 2, 24, 0);
+      }
+      .animation_container__left-side {
+        background-color: var(--color-orangered);
+        height: 100%;
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .animation_container__left-side--items-1 {
+        height: 10rem;
+        width: 10rem;
+        background-color: black;
+        border-radius: 100rem;
+      }
+      .animForCircle {
+        animation: animForCircle 5s ease-in-out infinite;
+      }
+      .animation_container__left-side--items-1:hover {
+        animation-play-state: paused;
+      }
+
+      .animation_container__left-side--items-2 {
+        height: 5rem;
+        width: 5rem;
+        background-color: #fff;
+        margin-left: 212px;
+        margin-top: 100px;
+        border-radius: 100px;
+      }
+      .bouncing {
+        animation: bouncing 0.8s ease-in-out infinite;
+      }
+      @keyframes animForCircle {
+        0% {
+          transform: translate(0);
+        }
+        40% {
+          transform: translateX(620px);
+        }
+        60% {
+          transform: translateY(150px) translateX(620px);
+        }
+        80% {
+          transform: translateY(150px) translateX(-3px);
+        }
+      }
+      @keyframes bouncing {
+        0% {
+          transform: translate(0);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
+          background-color: yellow;
+        }
+        40% {
+          transform: translateY(-80px);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+          background-color: white;
+        }
+        60% {
+          transform: translate(0);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
+          background-color: yellow;
+        }
+        70% {
+          transform: translateY(-30px);
+          box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.6);
+          background-color: white;
+        }
+        80% {
+          transform: translate(0);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+          background-color: yellow;
+        }
+        90% {
+          transform: translateY(-20px);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+          background-color: white;
+        }
+        100% {
+          transform: translate(0);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+          background-color: yellow;
+        }
+      }
+      .animation_container__right-side {
+        flex: 0 0 50%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .animation_container__right-side--items-1 {
+        height: 3rem;
+        width: 25rem;
+        background-color: rgb(43, 255, 0);
+        border-radius: 20rem;
+        animation-delay: 0.1s;
+      }
+      .weirdDirections {
+        animation: weirdDirections 3s ease-in-out infinite;
+      }
+      .animation_container__right-side--items-2 {
+        height: 3rem;
+        width: 25rem;
+        background-color: rgb(202, 11, 216);
+        border-radius: 20rem;
+        margin-right: 212px;
+        margin-top: 100px;
+      }
+      .spinning {
+        animation: spinning 0.1s linear infinite;
+      }
+      @keyframes weirdDirections {
+        0% {
+          transform: translate(0);
+          background-color: white;
+        }
+        20% {
+          transform: translateX(470px);
+          background-color: black;
+        }
+        40% {
+          transform: translateY(220px);
+          background-color: red;
+        }
+        60% {
+          transform: translateX(470px) translateY(220px);
+          background-color: yellow;
+        }
+        80% {
+          transform: translate(0);
+          background-color: green;
+        }
+      }
+
+      @keyframes spinning {
+        0% {
+          transform: translate(0);
+        }
+
+        50% {
+          transform: rotate(180deg) scale(1.2);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+      .important {
+        display: flex;
+        justify-content: space-between;
+        height: 27.8rem;
+      }
+      .important__start {
+        align-self: self-end;
+        flex: 0 0 34%;
+        margin: 0 5rem;
+        border: none;
+        font-weight: 900;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        background-color: #fff;
+        color: var(--color-blue);
+        padding: 3rem 6rem;
+        cursor: pointer;
+        background-image: linear-gradient(
+          to top right,
+          rgba(0, 0, 255, 0.58),
+          rgba(255, 255, 255, 0.571)
+        );
+        box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.6);
+        transition: all 0.2s;
+      }
+      .important__start:active {
+        transform: translateY(5px);
+        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.6);
+      }
+      .output__container {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin-top: 5rem;
+        padding-top: 4rem;
+        font-size: 1.6rem;
+      }
+      .output__container-header {
+        align-self: flex-start;
+        margin-left: 5rem;
+        font-size: 3rem;
+        font-weight: 800;
+        font-family: "Roboto Slab", serif;
+        color: green;
+        text-transform: uppercase;
+        word-spacing: 1.1rem;
+        letter-spacing: 6px;
+      }
+
+      .output__container-result {
+        border: 1px solid white;
+        margin: 2rem 8rem;
+        padding: 2rem;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-family: "Hanuman", serif;
+      }
+    </style>
+    <script src="1118.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 class="header">
+      keep taking input untill we can produce a
+      <span class="header__important-note"
+        >average numbers with certain condition</span
+      >
+    </h3>
+    <div class="modal">
+      <p>
+        here's the condition: <br />
+        > input numbers must be between 0 to 10 <br />
+        > if invalid number is given, then a new prompt will appear for re-enter
+        number! > tips: you can tap the "animation" button to stop the animation
+        game
+      </p>
+    </div>
+    <div class="animation_container">
+      <div class="animation_container__left-side">
+        <div class="animation_container__left-side--items-1"></div>
+        <div class="animation_container__left-side--items-2"></div>
+      </div>
+      <p class="animation_title">start animation</p>
+      <div class="animation_container__right-side">
+        <div class="animation_container__right-side--items-1"></div>
+        <div class="animation_container__right-side--items-2"></div>
+      </div>
+    </div>
+    <div class="important">
+      <button class="important__start">start program</button>
+      <div class="output__container">
+        <p class="output__container-header">program result</p>
+        <p class="output__container-result">no output available</p>
+      </div>
+    </div>
+  </body>
+</html>
